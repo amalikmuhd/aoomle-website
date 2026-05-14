@@ -30,6 +30,8 @@ export function ShimmerButton({
           '--shimmer-duration': shimmerDuration,
           '--border-radius': borderRadius,
           '--background': background,
+          background,
+          borderRadius,
         } as React.CSSProperties
       }
       className={cn(
@@ -37,10 +39,6 @@ export function ShimmerButton({
         'hover:brightness-110 active:brightness-95',
         className,
       )}
-      style={{
-        background,
-        borderRadius,
-      }}
       {...props}
     >
       <span
