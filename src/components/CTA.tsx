@@ -7,7 +7,7 @@ export function CTA() {
   const { sectionVariants, viewportConfig } = useAnimationConfig()
 
   const handleContact = () => {
-    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
+    window.location.href = 'mailto:malik@aoomle.xyz?subject=Consultation%20Request'
   }
 
   return (

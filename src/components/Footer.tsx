@@ -30,7 +30,7 @@ export function Footer() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top — brand + columns */}
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-10 mb-14">
+        <div className="grid grid-cols-2 lg:grid-cols-6 gap-10 mb-14">
           {/* Brand */}
           <div className="col-span-2">
             <div className="flex items-baseline gap-1.5 mb-3">
@@ -43,9 +43,6 @@ export function Footer() {
             </div>
             <p className="text-[#6B6B6B] text-sm leading-relaxed max-w-xs">
               {footer.tagline}
-            </p>
-            <p className="text-[#6B6B6B] text-sm mt-3">
-              {footer.address}
             </p>
           </div>
 
@@ -69,6 +66,22 @@ export function Footer() {
               </ul>
             </nav>
           ))}
+
+          {/* Contact Us */}
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-[0.08em] text-[#6B6B6B] mb-5">
+              Contact Us
+            </h3>
+            <p className="text-sm text-[#A3A3A3] leading-relaxed mb-3">
+              {footer.address}
+            </p>
+            <a
+              href={`mailto:${footer.email}`}
+              className="text-sm text-[#A3A3A3] hover:text-[#2563EB] transition-colors duration-200 break-all"
+            >
+              {footer.email}
+            </a>
+          </div>
         </div>
 
         {/* Divider */}

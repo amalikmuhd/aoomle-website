@@ -193,7 +193,8 @@ export const cta = {
 export const footer = {
   brand: 'Aoomle Technology',
   tagline: 'Innovation Engineered for Your Business',
-  address: 'Wills Court, Citec Estate, Mbora',
+  address: 'Citec Estate, Mbora, Abuja',
+  email: 'malik@aoomle.xyz',
   columns: [
     {
       heading: 'Company',
