@@ -4,7 +4,6 @@ export const nav = {
     { label: 'Features', href: '#features' },
     { label: 'About', href: '#about' },
     { label: 'Solutions', href: '#solutions' },
-    { label: 'Contact', href: '#contact' },
   ],
   cta: 'Talk to Us',
 }
@@ -78,7 +77,7 @@ export const about = {
 
 export const solutions = {
   badge: 'SOLUTIONS',
-  heading: 'Tailored for Every Sector',
+  heading: 'Tailored Solutions for Your Business',
   tabs: [
     {
       id: 'healthcare',
