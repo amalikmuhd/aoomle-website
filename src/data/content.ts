@@ -1,5 +1,9 @@
+import brandData from './brand.json'
+
+export const brand = brandData
+
 export const nav = {
-  brand: { name: 'Aoomle', nameWeight: 'Technology' },
+  brand: { name: brand.name, nameWeight: brand.nameWeight },
   links: [
     { label: 'Features', href: '#features' },
     { label: 'About', href: '#about' },
@@ -64,7 +68,7 @@ export const about = {
   badge: 'ABOUT US',
   heading: 'A Decade of Building What Matters',
   paragraphs: [
-    'At Aoomle Technology, we believe great software is built on deep understanding — of your business, your users, and the problems truly worth solving. Our team combines technical depth with strategic thinking to deliver solutions that create real, lasting value.',
+    `At ${brand.nameFull}, we believe great software is built on deep understanding — of your business, your users, and the problems truly worth solving. Our team combines technical depth with strategic thinking to deliver solutions that create real, lasting value.`,
     'We partner with businesses at every stage — from early-stage startups to established enterprises — bringing the same commitment to quality and craftsmanship to every engagement.',
   ],
   stats: [
@@ -182,13 +186,13 @@ export const process = {
 }
 
 export const contact = {
-  phone: '09058572625',
-  phoneHref: 'tel:+2349058572625',
-  address: 'Plot 12A, Wills Court Estate, Abuja, FCT, Nigeria',
-  email: 'malik@aoomle.xyz',
+  phone: brand.phone,
+  phoneHref: brand.phoneHref,
+  address: brand.address,
+  email: brand.email,
 }
 
-/** Canonical contact for legal policy pages (public/*.html) — keep in sync with this object */
+/** Canonical contact for legal policy pages — generated from src/data/brand.json */
 export const legalContact = contact
 
 export const cta = {
@@ -199,8 +203,8 @@ export const cta = {
 }
 
 export const footer = {
-  brand: 'Aoomle Technology',
-  tagline: 'Innovation Engineered for Your Business',
+  brand: brand.nameFull,
+  tagline: brand.tagline,
   phone: contact.phone,
   phoneHref: contact.phoneHref,
   address: contact.address,
@@ -228,7 +232,7 @@ export const footer = {
       ],
     },
   ],
-  copyright: '© 2025 Aoomle Technology. All rights reserved.',
+  copyright: `© 2025 ${brand.nameFull}. All rights reserved.`,
   social: {
     instagram: 'https://www.instagram.com/aoomle_tech',
   },

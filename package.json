@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "generate:legal": "node scripts/generate-legal-pages.mjs",
+    "verify:brand": "node scripts/verify-brand.mjs",
+    "build": "npm run verify:brand && npm run generate:legal && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
