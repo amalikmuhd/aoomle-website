@@ -216,10 +216,14 @@ export const footer = {
         'Cloud Solutions',
       ],
     },
-    // {
-    //   heading: 'Legal',
-    //   links: ['Privacy Policy', 'Terms of Service'],
-    // },
+    {
+      heading: 'Legal',
+      links: [
+        { label: 'Privacy Policy', href: '/privacy-policy.html' },
+        { label: 'Terms and Conditions', href: '/terms-and-conditions.html' },
+        { label: 'Return Policy', href: '/return-policy.html' },
+      ],
+    },
   ],
   copyright: '© 2025 Aoomle Technology. All rights reserved.',
   social: {

@@ -46,16 +46,20 @@ export function Footer() {
                 {col.heading}
               </h3>
               <ul className="space-y-3">
-                {col.links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-sm text-[#525252] hover:text-[#111827] transition-colors duration-200"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                {col.links.map((link) => {
+                  const label = typeof link === 'string' ? link : link.label
+                  const href = typeof link === 'string' ? '#' : link.href
+                  return (
+                    <li key={label}>
+                      <a
+                        href={href}
+                        className="text-sm text-[#525252] hover:text-[#111827] transition-colors duration-200"
+                      >
+                        {label}
+                      </a>
+                    </li>
+                  )
+                })}
               </ul>
             </nav>
           ))}
