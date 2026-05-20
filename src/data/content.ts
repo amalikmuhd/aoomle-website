@@ -188,6 +188,9 @@ export const contact = {
   email: 'malik@aoomle.xyz',
 }
 
+/** Canonical contact for legal policy pages (public/*.html) — keep in sync with this object */
+export const legalContact = contact
+
 export const cta = {
   heading: 'Ready to Transform Your Business?',
   subtext:
