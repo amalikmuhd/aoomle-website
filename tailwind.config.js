@@ -6,9 +6,10 @@ export default {
       colors: {
         bg: '#FFFFFF',
         surface: '#F8FAFC',
-        accent: '#2563EB',
-        'accent-hover': '#1D4ED8',
-        'accent-light': '#3B82F6',
+        accent: '#111827',
+        'accent-hover': '#000000',
+        'accent-light': '#374151',
+        'accent-muted': '#6B7280',
         'text-primary': '#111827',
         'text-secondary': '#525252',
         'text-muted': '#737373',

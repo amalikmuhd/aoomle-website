@@ -14,8 +14,8 @@ export function Meteors({ number = 20, className }: MeteorsProps) {
         <span
           key={i}
           className={cn(
-            'pointer-events-none absolute left-1/2 top-1/2 h-0.5 w-0.5 rotate-[215deg] animate-[meteor_linear_infinite] rounded-[9999px] bg-[#3B82F6] shadow-[0_0_0_1px_#3b82f620]',
-            'before:absolute before:top-1/2 before:h-px before:w-[50px] before:-translate-y-1/2 before:transform before:bg-gradient-to-r before:from-[#3B82F6] before:to-transparent before:content-[""]',
+            'pointer-events-none absolute left-1/2 top-1/2 h-0.5 w-0.5 rotate-[215deg] animate-[meteor_linear_infinite] rounded-[9999px] bg-[#374151] shadow-[0_0_0_1px_#37415120]',
+            'before:absolute before:top-1/2 before:h-px before:w-[50px] before:-translate-y-1/2 before:transform before:bg-gradient-to-r before:from-[#374151] before:to-transparent before:content-[""]',
             className,
           )}
           style={{

@@ -9,7 +9,7 @@ export function AnimatedGradientText({ children, className }: AnimatedGradientTe
   return (
     <span
       className={cn(
-        'inline-block bg-gradient-to-r from-[#2563EB] via-[#60A5FA] to-[#2563EB] bg-[length:200%_auto] bg-clip-text text-transparent',
+        'inline-block bg-gradient-to-r from-[#111827] via-[#6B7280] to-[#111827] bg-[length:200%_auto] bg-clip-text text-transparent',
         'animate-[gradient-x_3s_ease_infinite]',
         className,
       )}

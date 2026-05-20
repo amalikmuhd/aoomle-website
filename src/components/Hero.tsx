@@ -39,7 +39,7 @@ export function Hero() {
         className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
         style={{
           background:
-            'radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%)',
+            'radial-gradient(circle, rgba(17,24,39,0.08) 0%, transparent 70%)',
         }}
         aria-hidden="true"
       />
@@ -48,7 +48,7 @@ export function Hero() {
         <motion.div {...fadeIn(0)} className="mb-6">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-black/[0.08] bg-[#F8FAFC] text-[#525252] text-sm font-medium">
             <span
-              className="w-2 h-2 rounded-full bg-[#2563EB] animate-[pulse-dot_2s_ease-in-out_infinite]"
+              className="w-2 h-2 rounded-full bg-[#111827] animate-[pulse-dot_2s_ease-in-out_infinite]"
               aria-hidden="true"
             />
             {hero.badge}
@@ -89,7 +89,7 @@ export function Hero() {
           </ShimmerButton>
           <button
             onClick={handleScrollToSolutions}
-            className="text-base px-8 py-3.5 rounded-xl font-semibold text-[#111827] border border-black/[0.12] hover:border-[#2563EB]/60 hover:bg-[#2563EB]/5 transition-all duration-200"
+            className="text-base px-8 py-3.5 rounded-xl font-semibold text-[#111827] border border-black/[0.12] hover:border-[#111827]/60 hover:bg-[#111827]/5 transition-all duration-200"
           >
             {hero.ctaSecondary}
           </button>

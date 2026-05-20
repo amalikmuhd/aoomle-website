@@ -64,7 +64,7 @@ export function Navbar() {
                   {activeLink === link.href && (
                     <motion.span
                       layoutId="nav-underline"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#2563EB]"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#111827]"
                     />
                   )}
                 </button>

@@ -12,8 +12,8 @@ export function BorderBeam({
   className,
   size = 200,
   duration = 8,
-  colorFrom = '#2563EB',
-  colorTo = '#60A5FA',
+  colorFrom = '#111827',
+  colorTo = '#6B7280',
 }: BorderBeamProps) {
   return (
     <div

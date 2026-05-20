@@ -16,7 +16,7 @@ export function ShimmerButton({
   shimmerSize = '0.05em',
   shimmerDuration = '3s',
   borderRadius = '8px',
-  background = '#2563EB',
+  background = '#111827',
   className,
   children,
   ...props

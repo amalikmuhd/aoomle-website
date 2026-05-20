@@ -41,7 +41,7 @@ export function CTA() {
               className="absolute inset-0 -z-10 blur-3xl scale-150"
               style={{
                 background:
-                  'radial-gradient(circle, rgba(37,99,235,0.2) 0%, transparent 70%)',
+                  'radial-gradient(circle, rgba(17,24,39,0.2) 0%, transparent 70%)',
               }}
               aria-hidden="true"
             />
@@ -56,18 +56,18 @@ export function CTA() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-3xl text-left">
             <a
               href={contact.phoneHref}
-              className="flex items-start gap-3 p-4 rounded-xl bg-[#F8FAFC] border border-black/[0.08] hover:border-[#2563EB]/30 transition-colors duration-200 group"
+              className="flex items-start gap-3 p-4 rounded-xl bg-[#F8FAFC] border border-black/[0.08] hover:border-[#111827]/30 transition-colors duration-200 group"
             >
               <Phone
                 size={20}
-                className="text-[#2563EB] flex-shrink-0 mt-0.5"
+                className="text-[#111827] flex-shrink-0 mt-0.5"
                 aria-hidden="true"
               />
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#737373] mb-1">
                   Phone
                 </p>
-                <p className="text-sm font-medium text-[#111827] group-hover:text-[#2563EB] transition-colors">
+                <p className="text-sm font-medium text-[#111827] group-hover:text-[#111827] transition-colors">
                   {contact.phone}
                 </p>
               </div>
@@ -76,7 +76,7 @@ export function CTA() {
             <div className="flex items-start gap-3 p-4 rounded-xl bg-[#F8FAFC] border border-black/[0.08]">
               <MapPin
                 size={20}
-                className="text-[#2563EB] flex-shrink-0 mt-0.5"
+                className="text-[#111827] flex-shrink-0 mt-0.5"
                 aria-hidden="true"
               />
               <div>
@@ -91,18 +91,18 @@ export function CTA() {
 
             <a
               href={`mailto:${contact.email}`}
-              className="flex items-start gap-3 p-4 rounded-xl bg-[#F8FAFC] border border-black/[0.08] hover:border-[#2563EB]/30 transition-colors duration-200 group"
+              className="flex items-start gap-3 p-4 rounded-xl bg-[#F8FAFC] border border-black/[0.08] hover:border-[#111827]/30 transition-colors duration-200 group"
             >
               <Mail
                 size={20}
-                className="text-[#2563EB] flex-shrink-0 mt-0.5"
+                className="text-[#111827] flex-shrink-0 mt-0.5"
                 aria-hidden="true"
               />
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#737373] mb-1">
                   Email
                 </p>
-                <p className="text-sm font-medium text-[#111827] group-hover:text-[#2563EB] transition-colors break-all">
+                <p className="text-sm font-medium text-[#111827] group-hover:text-[#111827] transition-colors break-all">
                   {contact.email}
                 </p>
               </div>

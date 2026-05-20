@@ -35,7 +35,7 @@ export function Process() {
           variants={sectionVariants}
           className="text-center mb-16"
         >
-          <span className="inline-block text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-[#2563EB] mb-4">
+          <span className="inline-block text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-[#111827] mb-4">
             {processData.badge}
           </span>
           <h2
@@ -53,7 +53,7 @@ export function Process() {
             aria-hidden="true"
           >
             <motion.div
-              className="h-full bg-[#2563EB] origin-left"
+              className="h-full bg-[#111827] origin-left"
               style={{ scaleX: prefersReducedMotion ? 1 : scaleX }}
             />
           </div>
@@ -74,14 +74,14 @@ export function Process() {
                   }}
                   className="relative flex flex-col items-center lg:items-start text-center lg:text-left"
                 >
-                  <div className="relative w-16 h-16 rounded-2xl bg-white border border-[#2563EB]/30 flex items-center justify-center mb-5 z-10 shadow-sm">
-                    <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#2563EB] text-white text-[10px] font-bold flex items-center justify-center">
+                  <div className="relative w-16 h-16 rounded-2xl bg-white border border-[#111827]/30 flex items-center justify-center mb-5 z-10 shadow-sm">
+                    <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#111827] text-white text-[10px] font-bold flex items-center justify-center">
                       {step.number}
                     </span>
                     {Icon && (
                       <Icon
                         size={24}
-                        className="text-[#2563EB]"
+                        className="text-[#111827]"
                         strokeWidth={1.75}
                         aria-hidden="true"
                       />

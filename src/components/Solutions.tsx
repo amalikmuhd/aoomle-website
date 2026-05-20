@@ -23,7 +23,7 @@ export function Solutions() {
           variants={sectionVariants}
           className="text-center mb-14"
         >
-          <span className="inline-block text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-[#2563EB] mb-4">
+          <span className="inline-block text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-[#111827] mb-4">
             {solutions.badge}
           </span>
           <h2
@@ -63,7 +63,7 @@ export function Solutions() {
                 {activeTab === i && (
                   <motion.span
                     layoutId="activeTab"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#2563EB]"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#111827]"
                   />
                 )}
               </button>
@@ -103,14 +103,14 @@ export function Solutions() {
                     <li key={bullet} className="flex items-center gap-3">
                       <CheckCircle2
                         size={18}
-                        className="text-[#2563EB] flex-shrink-0"
+                        className="text-[#111827] flex-shrink-0"
                         aria-hidden="true"
                       />
                       <span className="text-[#525252] text-sm">{bullet}</span>
                     </li>
                   ))}
                 </ul>
-                <button className="inline-flex items-center gap-2 text-[#2563EB] font-semibold hover:gap-3 transition-all duration-200 group">
+                <button className="inline-flex items-center gap-2 text-[#111827] font-semibold hover:gap-3 transition-all duration-200 group">
                   Learn More
                   <ArrowRight
                     size={16}

@@ -69,13 +69,13 @@ export function Footer() {
             </p>
             <a
               href={footer.phoneHref}
-              className="block text-sm text-[#525252] hover:text-[#2563EB] transition-colors duration-200 mb-3"
+              className="block text-sm text-[#525252] hover:text-[#111827] transition-colors duration-200 mb-3"
             >
               {footer.phone}
             </a>
             <a
               href={`mailto:${footer.email}`}
-              className="text-sm text-[#525252] hover:text-[#2563EB] transition-colors duration-200 break-all"
+              className="text-sm text-[#525252] hover:text-[#111827] transition-colors duration-200 break-all"
             >
               {footer.email}
             </a>
@@ -90,14 +90,14 @@ export function Footer() {
               <a
                 href="#"
                 aria-label="Twitter / X"
-                className="text-[#737373] hover:text-[#2563EB] transition-colors duration-200"
+                className="text-[#737373] hover:text-[#111827] transition-colors duration-200"
               >
                 <TwitterX size={18} />
               </a>
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="text-[#737373] hover:text-[#2563EB] transition-colors duration-200"
+                className="text-[#737373] hover:text-[#111827] transition-colors duration-200"
               >
                 <LinkedinIcon size={18} />
               </a>
@@ -106,7 +106,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="text-[#737373] hover:text-[#2563EB] transition-colors duration-200"
+                className="text-[#737373] hover:text-[#111827] transition-colors duration-200"
               >
                 <InstagramIcon size={18} />
               </a>

@@ -20,7 +20,7 @@ export function About() {
             viewport={viewportConfig}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="inline-block text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-[#2563EB] mb-4">
+            <span className="inline-block text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-[#111827] mb-4">
               {about.badge}
             </span>
             <h2
@@ -51,13 +51,13 @@ export function About() {
               <div
                 key={stat.label}
                 className="relative p-6 rounded-2xl bg-white border border-black/[0.08] overflow-hidden shadow-sm"
-                style={{ borderLeft: '3px solid #2563EB' }}
+                style={{ borderLeft: '3px solid #111827' }}
               >
                 <div
                   className="absolute inset-0 pointer-events-none"
                   style={{
                     background:
-                      'radial-gradient(ellipse at 0% 50%, rgba(37,99,235,0.06) 0%, transparent 70%)',
+                      'radial-gradient(ellipse at 0% 50%, rgba(17,24,39,0.06) 0%, transparent 70%)',
                   }}
                   aria-hidden="true"
                 />

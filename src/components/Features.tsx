@@ -42,14 +42,14 @@ function ServiceCard({
         whileHover={cardHover}
         className={cn(
           'group relative p-6 rounded-2xl border border-black/[0.08] bg-[#F8FAFC]',
-          'hover:border-[#2563EB]/40 transition-colors duration-300 overflow-hidden h-full shadow-sm',
+          'hover:border-[#111827]/40 transition-colors duration-300 overflow-hidden h-full shadow-sm',
         )}
       >
         <div
           className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
           style={{
             background:
-              'linear-gradient(#F8FAFC, #F8FAFC) padding-box, linear-gradient(135deg, #2563EB, #60A5FA, transparent) border-box',
+              'linear-gradient(#F8FAFC, #F8FAFC) padding-box, linear-gradient(135deg, #111827, #6B7280, transparent) border-box',
             border: '1px solid transparent',
             borderRadius: 'inherit',
           }}
@@ -60,17 +60,17 @@ function ServiceCard({
           className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
           style={{
             background:
-              'radial-gradient(circle at 50% 0%, rgba(37,99,235,0.06) 0%, transparent 70%)',
+              'radial-gradient(circle at 50% 0%, rgba(17,24,39,0.06) 0%, transparent 70%)',
           }}
           aria-hidden="true"
         />
 
         <div className="relative z-10">
-          <div className="w-12 h-12 rounded-xl bg-[#2563EB]/10 border border-[#2563EB]/20 flex items-center justify-center mb-5 group-hover:bg-[#2563EB]/15 transition-colors duration-300">
+          <div className="w-12 h-12 rounded-xl bg-[#111827]/10 border border-[#111827]/20 flex items-center justify-center mb-5 group-hover:bg-[#111827]/15 transition-colors duration-300">
             {Icon && (
               <Icon
                 size={22}
-                className="text-[#2563EB]"
+                className="text-[#111827]"
                 strokeWidth={1.75}
                 aria-hidden="true"
               />
@@ -103,7 +103,7 @@ export function Features() {
           variants={sectionVariants}
           className="text-center mb-16"
         >
-          <span className="inline-block text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-[#2563EB] mb-4">
+          <span className="inline-block text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-[#111827] mb-4">
             {features.badge}
           </span>
           <h2
