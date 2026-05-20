@@ -45,18 +45,8 @@ export function Hero() {
       />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-        <motion.div {...fadeIn(0)} className="mb-6">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-black/[0.08] bg-[#F8FAFC] text-[#525252] text-sm font-medium">
-            <span
-              className="w-2 h-2 rounded-full bg-[#111827] animate-[pulse-dot_2s_ease-in-out_infinite]"
-              aria-hidden="true"
-            />
-            {hero.badge}
-          </span>
-        </motion.div>
-
         <motion.h1
-          {...fadeIn(0.15)}
+          {...fadeIn(0)}
           className="font-extrabold tracking-tight mb-5"
           style={{
             fontSize: 'clamp(2.8rem, 6vw, 5.2rem)',
@@ -71,14 +61,14 @@ export function Hero() {
         </motion.h1>
 
         <motion.p
-          {...fadeIn(0.3)}
+          {...fadeIn(0.15)}
           className="text-[#525252] text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10"
         >
           {hero.subheadline}
         </motion.p>
 
         <motion.div
-          {...fadeIn(0.45)}
+          {...fadeIn(0.3)}
           className="flex flex-col sm:flex-row items-center gap-4"
         >
           <ShimmerButton

@@ -51,7 +51,6 @@ export function About() {
               <div
                 key={stat.label}
                 className="relative p-6 rounded-2xl bg-white border border-black/[0.08] overflow-hidden shadow-sm"
-                style={{ borderLeft: '3px solid #111827' }}
               >
                 <div
                   className="absolute inset-0 pointer-events-none"

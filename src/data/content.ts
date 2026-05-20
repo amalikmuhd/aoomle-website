@@ -10,7 +10,6 @@ export const nav = {
 }
 
 export const hero = {
-  badge: 'Trusted Technology Partner',
   headline1: 'Building Technology',
   headline2: 'That Drives Results',
   subheadline:
