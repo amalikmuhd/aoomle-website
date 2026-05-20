@@ -1,4 +1,5 @@
 import { footer } from '../data/content'
+import { Logo } from './Logo'
 
 const TwitterX = ({ size = 18 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -31,13 +32,8 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-10 mb-14">
           <div className="col-span-2">
-            <div className="flex items-baseline gap-1.5 mb-3">
-              <span className="text-[#111827] font-extrabold text-xl tracking-tight">
-                Aoomle
-              </span>
-              <span className="text-[#525252] font-normal text-lg tracking-tight">
-                Technology
-              </span>
+            <div className="mb-3">
+              <Logo showWordmark fullWordmark />
             </div>
             <p className="text-[#737373] text-sm leading-relaxed max-w-xs">
               {footer.tagline}
@@ -106,7 +102,9 @@ export function Footer() {
                 <LinkedinIcon size={18} />
               </a>
               <a
-                href="#"
+                href={footer.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="text-[#737373] hover:text-[#2563EB] transition-colors duration-200"
               >

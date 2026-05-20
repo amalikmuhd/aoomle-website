@@ -224,4 +224,7 @@ export const footer = {
     // },
   ],
   copyright: '© 2025 Aoomle Technology. All rights reserved.',
+  social: {
+    instagram: 'https://www.instagram.com/aoomle_tech',
+  },
 }

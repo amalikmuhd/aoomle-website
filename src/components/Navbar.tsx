@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { ShimmerButton } from './ui/ShimmerButton'
+import { Logo } from './Logo'
 import { nav } from '../data/content'
 import { cn } from '../lib/utils'
 
@@ -38,15 +39,10 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             <a
               href="#"
-              className="flex items-baseline gap-1.5 group"
+              className="group"
               aria-label="Aoomle Technology home"
             >
-              <span className="text-[#111827] font-extrabold text-xl tracking-tight group-hover:text-[#2563EB] transition-colors">
-                Aoomle
-              </span>
-              <span className="text-[#525252] font-normal text-lg tracking-tight group-hover:text-[#111827] transition-colors">
-                Technology
-              </span>
+              <Logo className="group-hover:opacity-90 transition-opacity" />
             </a>
 
             <nav
