@@ -25,31 +25,28 @@ const InstagramIcon = ({ size = 18 }: { size?: number }) => (
 export function Footer() {
   return (
     <footer
-      className="bg-[#0D0D0D] border-t border-white/[0.06] pt-16 pb-8"
+      className="bg-[#F8FAFC] border-t border-black/[0.06] pt-16 pb-8"
       aria-label="Site footer"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top — brand + columns */}
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-10 mb-14">
-          {/* Brand */}
           <div className="col-span-2">
             <div className="flex items-baseline gap-1.5 mb-3">
-              <span className="text-[#F2F2F2] font-extrabold text-xl tracking-tight">
+              <span className="text-[#111827] font-extrabold text-xl tracking-tight">
                 Aoomle
               </span>
-              <span className="text-[#A3A3A3] font-normal text-lg tracking-tight">
+              <span className="text-[#525252] font-normal text-lg tracking-tight">
                 Technology
               </span>
             </div>
-            <p className="text-[#6B6B6B] text-sm leading-relaxed max-w-xs">
+            <p className="text-[#737373] text-sm leading-relaxed max-w-xs">
               {footer.tagline}
             </p>
           </div>
 
-          {/* Nav columns */}
           {footer.columns.map((col) => (
             <nav key={col.heading} aria-label={`${col.heading} links`}>
-              <h3 className="text-xs font-semibold uppercase tracking-[0.08em] text-[#6B6B6B] mb-5">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.08em] text-[#737373] mb-5">
                 {col.heading}
               </h3>
               <ul className="space-y-3">
@@ -57,7 +54,7 @@ export function Footer() {
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-sm text-[#A3A3A3] hover:text-[#F2F2F2] transition-colors duration-200"
+                      className="text-sm text-[#525252] hover:text-[#111827] transition-colors duration-200"
                     >
                       {link}
                     </a>
@@ -67,48 +64,51 @@ export function Footer() {
             </nav>
           ))}
 
-          {/* Contact Us */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.08em] text-[#6B6B6B] mb-5">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.08em] text-[#737373] mb-5">
               Contact Us
             </h3>
-            <p className="text-sm text-[#A3A3A3] leading-relaxed mb-3">
+            <p className="text-sm text-[#525252] leading-relaxed mb-3">
               {footer.address}
             </p>
             <a
+              href={footer.phoneHref}
+              className="block text-sm text-[#525252] hover:text-[#2563EB] transition-colors duration-200 mb-3"
+            >
+              {footer.phone}
+            </a>
+            <a
               href={`mailto:${footer.email}`}
-              className="text-sm text-[#A3A3A3] hover:text-[#2563EB] transition-colors duration-200 break-all"
+              className="text-sm text-[#525252] hover:text-[#2563EB] transition-colors duration-200 break-all"
             >
               {footer.email}
             </a>
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-white/[0.06] pt-8">
+        <div className="border-t border-black/[0.06] pt-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-[#6B6B6B] text-sm">{footer.copyright}</p>
+            <p className="text-[#737373] text-sm">{footer.copyright}</p>
 
-            {/* Social icons */}
             <div className="flex items-center gap-4" aria-label="Social media links">
               <a
                 href="#"
                 aria-label="Twitter / X"
-                className="text-[#6B6B6B] hover:text-[#2563EB] transition-colors duration-200"
+                className="text-[#737373] hover:text-[#2563EB] transition-colors duration-200"
               >
                 <TwitterX size={18} />
               </a>
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="text-[#6B6B6B] hover:text-[#2563EB] transition-colors duration-200"
+                className="text-[#737373] hover:text-[#2563EB] transition-colors duration-200"
               >
                 <LinkedinIcon size={18} />
               </a>
               <a
                 href="#"
                 aria-label="Instagram"
-                className="text-[#6B6B6B] hover:text-[#2563EB] transition-colors duration-200"
+                className="text-[#737373] hover:text-[#2563EB] transition-colors duration-200"
               >
                 <InstagramIcon size={18} />
               </a>

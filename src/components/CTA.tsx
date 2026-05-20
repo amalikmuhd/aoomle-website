@@ -1,19 +1,20 @@
 import { motion } from 'framer-motion'
+import { Phone, MapPin, Mail } from 'lucide-react'
 import { ShimmerButton } from './ui/ShimmerButton'
-import { cta } from '../data/content'
+import { cta, contact } from '../data/content'
 import { useAnimationConfig } from '../hooks/useScrollAnimation'
 
 export function CTA() {
   const { sectionVariants, viewportConfig } = useAnimationConfig()
 
   const handleContact = () => {
-    window.location.href = 'mailto:malik@aoomle.xyz?subject=Consultation%20Request'
+    window.location.href = `mailto:${contact.email}?subject=Consultation%20Request`
   }
 
   return (
     <section
       id="contact"
-      className="py-24 lg:py-32 bg-[#141414] border-t border-white/[0.06]"
+      className="py-24 lg:py-32 bg-white border-t border-black/[0.06]"
       aria-labelledby="cta-heading"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -26,22 +27,21 @@ export function CTA() {
         >
           <h2
             id="cta-heading"
-            className="font-bold text-[#F2F2F2] mb-5"
+            className="font-bold text-[#111827] mb-5"
             style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}
           >
             {cta.heading}
           </h2>
-          <p className="text-[#A3A3A3] text-lg leading-relaxed mb-12 max-w-2xl">
+          <p className="text-[#525252] text-lg leading-relaxed mb-12 max-w-2xl">
             {cta.subtext}
           </p>
 
-          {/* Button with radial glow */}
-          <div className="relative">
+          <div className="relative mb-12">
             <div
               className="absolute inset-0 -z-10 blur-3xl scale-150"
               style={{
                 background:
-                  'radial-gradient(circle, rgba(37,99,235,0.35) 0%, transparent 70%)',
+                  'radial-gradient(circle, rgba(37,99,235,0.2) 0%, transparent 70%)',
               }}
               aria-hidden="true"
             />
@@ -51,6 +51,62 @@ export function CTA() {
             >
               {cta.button}
             </ShimmerButton>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-3xl text-left">
+            <a
+              href={contact.phoneHref}
+              className="flex items-start gap-3 p-4 rounded-xl bg-[#F8FAFC] border border-black/[0.08] hover:border-[#2563EB]/30 transition-colors duration-200 group"
+            >
+              <Phone
+                size={20}
+                className="text-[#2563EB] flex-shrink-0 mt-0.5"
+                aria-hidden="true"
+              />
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#737373] mb-1">
+                  Phone
+                </p>
+                <p className="text-sm font-medium text-[#111827] group-hover:text-[#2563EB] transition-colors">
+                  {contact.phone}
+                </p>
+              </div>
+            </a>
+
+            <div className="flex items-start gap-3 p-4 rounded-xl bg-[#F8FAFC] border border-black/[0.08]">
+              <MapPin
+                size={20}
+                className="text-[#2563EB] flex-shrink-0 mt-0.5"
+                aria-hidden="true"
+              />
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#737373] mb-1">
+                  Address
+                </p>
+                <p className="text-sm font-medium text-[#111827] leading-relaxed">
+                  {contact.address}
+                </p>
+              </div>
+            </div>
+
+            <a
+              href={`mailto:${contact.email}`}
+              className="flex items-start gap-3 p-4 rounded-xl bg-[#F8FAFC] border border-black/[0.08] hover:border-[#2563EB]/30 transition-colors duration-200 group"
+            >
+              <Mail
+                size={20}
+                className="text-[#2563EB] flex-shrink-0 mt-0.5"
+                aria-hidden="true"
+              />
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#737373] mb-1">
+                  Email
+                </p>
+                <p className="text-sm font-medium text-[#111827] group-hover:text-[#2563EB] transition-colors break-all">
+                  {contact.email}
+                </p>
+              </div>
+            </a>
           </div>
         </motion.div>
       </div>

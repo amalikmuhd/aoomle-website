@@ -9,12 +9,11 @@ export function About() {
   return (
     <section
       id="about"
-      className="py-24 lg:py-32 bg-[#0D0D0D] border-t border-white/[0.06]"
+      className="py-24 lg:py-32 bg-[#F8FAFC] border-t border-black/[0.06]"
       aria-labelledby="about-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          {/* Left — text */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -26,7 +25,7 @@ export function About() {
             </span>
             <h2
               id="about-heading"
-              className="font-bold text-[#F2F2F2] mb-6"
+              className="font-bold text-[#111827] mb-6"
               style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}
             >
               {about.heading}
@@ -34,14 +33,13 @@ export function About() {
             {about.paragraphs.map((p, i) => (
               <p
                 key={i}
-                className="text-[#A3A3A3] leading-[1.7] mb-4 last:mb-0"
+                className="text-[#525252] leading-[1.7] mb-4 last:mb-0"
               >
                 {p}
               </p>
             ))}
           </motion.div>
 
-          {/* Right — stats */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -52,21 +50,20 @@ export function About() {
             {about.stats.map((stat) => (
               <div
                 key={stat.label}
-                className="relative p-6 rounded-2xl bg-[#141414] border border-white/[0.07] overflow-hidden"
+                className="relative p-6 rounded-2xl bg-white border border-black/[0.08] overflow-hidden shadow-sm"
                 style={{ borderLeft: '3px solid #2563EB' }}
               >
-                {/* Glow */}
                 <div
                   className="absolute inset-0 pointer-events-none"
                   style={{
                     background:
-                      'radial-gradient(ellipse at 0% 50%, rgba(37,99,235,0.1) 0%, transparent 70%)',
+                      'radial-gradient(ellipse at 0% 50%, rgba(37,99,235,0.06) 0%, transparent 70%)',
                   }}
                   aria-hidden="true"
                 />
                 <div className="relative">
                   <div
-                    className="text-3xl lg:text-4xl font-extrabold text-[#F2F2F2] mb-1.5"
+                    className="text-3xl lg:text-4xl font-extrabold text-[#111827] mb-1.5"
                     aria-label={`${stat.value}${stat.suffix} ${stat.label}`}
                   >
                     <NumberTicker
@@ -75,7 +72,7 @@ export function About() {
                       duration={2000}
                     />
                   </div>
-                  <div className="text-sm text-[#A3A3A3] font-medium leading-tight">
+                  <div className="text-sm text-[#525252] font-medium leading-tight">
                     {stat.label}
                   </div>
                 </div>

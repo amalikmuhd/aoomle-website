@@ -41,34 +41,32 @@ function ServiceCard({
       <motion.div
         whileHover={cardHover}
         className={cn(
-          'group relative p-6 rounded-2xl border border-white/[0.07] bg-[#141414]',
-          'hover:border-[#2563EB]/40 transition-colors duration-300 overflow-hidden h-full',
+          'group relative p-6 rounded-2xl border border-black/[0.08] bg-[#F8FAFC]',
+          'hover:border-[#2563EB]/40 transition-colors duration-300 overflow-hidden h-full shadow-sm',
         )}
       >
-        {/* Border beam on hover */}
         <div
           className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
           style={{
             background:
-              'linear-gradient(#141414, #141414) padding-box, linear-gradient(135deg, #2563EB, #60A5FA, transparent) border-box',
+              'linear-gradient(#F8FAFC, #F8FAFC) padding-box, linear-gradient(135deg, #2563EB, #60A5FA, transparent) border-box',
             border: '1px solid transparent',
             borderRadius: 'inherit',
           }}
           aria-hidden="true"
         />
 
-        {/* Blue glow on hover */}
         <div
           className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
           style={{
             background:
-              'radial-gradient(circle at 50% 0%, rgba(37,99,235,0.08) 0%, transparent 70%)',
+              'radial-gradient(circle at 50% 0%, rgba(37,99,235,0.06) 0%, transparent 70%)',
           }}
           aria-hidden="true"
         />
 
         <div className="relative z-10">
-          <div className="w-12 h-12 rounded-xl bg-[#2563EB]/10 border border-[#2563EB]/20 flex items-center justify-center mb-5 group-hover:bg-[#2563EB]/20 transition-colors duration-300">
+          <div className="w-12 h-12 rounded-xl bg-[#2563EB]/10 border border-[#2563EB]/20 flex items-center justify-center mb-5 group-hover:bg-[#2563EB]/15 transition-colors duration-300">
             {Icon && (
               <Icon
                 size={22}
@@ -78,10 +76,10 @@ function ServiceCard({
               />
             )}
           </div>
-          <h3 className="text-[1.1rem] font-semibold text-[#F2F2F2] mb-2.5 leading-snug">
+          <h3 className="text-[1.1rem] font-semibold text-[#111827] mb-2.5 leading-snug">
             {title}
           </h3>
-          <p className="text-[#A3A3A3] text-sm leading-relaxed">{description}</p>
+          <p className="text-[#525252] text-sm leading-relaxed">{description}</p>
         </div>
       </motion.div>
     </BlurFade>
@@ -94,11 +92,10 @@ export function Features() {
   return (
     <section
       id="features"
-      className="py-24 lg:py-32 bg-[#0D0D0D]"
+      className="py-24 lg:py-32 bg-white"
       aria-labelledby="features-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <motion.div
           initial="hidden"
           whileInView="show"
@@ -111,14 +108,13 @@ export function Features() {
           </span>
           <h2
             id="features-heading"
-            className="font-bold text-[#F2F2F2]"
+            className="font-bold text-[#111827]"
             style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}
           >
             {features.heading}
           </h2>
         </motion.div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.services.map((service, i) => (
             <ServiceCard

@@ -12,11 +12,10 @@ export function Solutions() {
   return (
     <section
       id="solutions"
-      className="py-24 lg:py-32 bg-[#141414] border-t border-white/[0.06]"
+      className="py-24 lg:py-32 bg-white border-t border-black/[0.06]"
       aria-labelledby="solutions-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <motion.div
           initial="hidden"
           whileInView="show"
@@ -29,23 +28,21 @@ export function Solutions() {
           </span>
           <h2
             id="solutions-heading"
-            className="font-bold text-[#F2F2F2]"
+            className="font-bold text-[#111827]"
             style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}
           >
             {solutions.heading}
           </h2>
         </motion.div>
 
-        {/* Tabs */}
         <motion.div
           initial="hidden"
           whileInView="show"
           viewport={viewportConfig}
           variants={sectionVariants}
         >
-          {/* Tab bar */}
           <div
-            className="flex items-center gap-0 border-b border-white/[0.08] mb-12 overflow-x-auto no-scrollbar"
+            className="flex items-center gap-0 border-b border-black/[0.08] mb-12 overflow-x-auto no-scrollbar"
             role="tablist"
             aria-label="Industry solutions"
           >
@@ -59,7 +56,7 @@ export function Solutions() {
                 onClick={() => setActiveTab(i)}
                 className="relative flex-shrink-0 px-6 py-3 text-sm font-semibold transition-colors duration-200 focus-visible:outline-none"
                 style={{
-                  color: activeTab === i ? '#F2F2F2' : '#6B6B6B',
+                  color: activeTab === i ? '#111827' : '#737373',
                 }}
               >
                 {tab.label}
@@ -73,7 +70,6 @@ export function Solutions() {
             ))}
           </div>
 
-          {/* Tab panels */}
           <motion.div
             key={activeTab}
             initial={{ opacity: 0, y: 16 }}
@@ -84,8 +80,7 @@ export function Solutions() {
             aria-labelledby={`tab-${active.id}`}
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-              {/* Image */}
-              <div className="rounded-2xl overflow-hidden border border-white/[0.07] aspect-video lg:aspect-[4/3]">
+              <div className="rounded-2xl overflow-hidden border border-black/[0.08] aspect-video lg:aspect-[4/3] shadow-sm">
                 <img
                   src={active.image}
                   alt={active.imageAlt}
@@ -96,12 +91,11 @@ export function Solutions() {
                 />
               </div>
 
-              {/* Content */}
               <div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-[#F2F2F2] mb-4">
+                <h3 className="text-2xl lg:text-3xl font-bold text-[#111827] mb-4">
                   {active.heading}
                 </h3>
-                <p className="text-[#A3A3A3] leading-[1.7] mb-8">
+                <p className="text-[#525252] leading-[1.7] mb-8">
                   {active.description}
                 </p>
                 <ul className="space-y-3 mb-8" aria-label={`${active.heading} features`}>
@@ -112,7 +106,7 @@ export function Solutions() {
                         className="text-[#2563EB] flex-shrink-0"
                         aria-hidden="true"
                       />
-                      <span className="text-[#A3A3A3] text-sm">{bullet}</span>
+                      <span className="text-[#525252] text-sm">{bullet}</span>
                     </li>
                   ))}
                 </ul>

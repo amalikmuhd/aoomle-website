@@ -29,28 +29,26 @@ export function Navbar() {
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           scrolled
-            ? 'bg-[#0D0D0D]/80 backdrop-blur-md border-b border-white/[0.06]'
+            ? 'bg-white/80 backdrop-blur-md border-b border-black/[0.06] shadow-sm'
             : 'bg-transparent',
         )}
         role="banner"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo */}
             <a
               href="#"
               className="flex items-baseline gap-1.5 group"
               aria-label="Aoomle Technology home"
             >
-              <span className="text-[#F2F2F2] font-extrabold text-xl tracking-tight group-hover:text-white transition-colors">
+              <span className="text-[#111827] font-extrabold text-xl tracking-tight group-hover:text-[#2563EB] transition-colors">
                 Aoomle
               </span>
-              <span className="text-[#A3A3A3] font-normal text-lg tracking-tight group-hover:text-[#F2F2F2] transition-colors">
+              <span className="text-[#525252] font-normal text-lg tracking-tight group-hover:text-[#111827] transition-colors">
                 Technology
               </span>
             </a>
 
-            {/* Desktop nav */}
             <nav
               className="hidden lg:flex items-center gap-8"
               aria-label="Main navigation"
@@ -62,8 +60,8 @@ export function Navbar() {
                   className={cn(
                     'relative text-sm font-medium transition-colors duration-200 pb-0.5',
                     activeLink === link.href
-                      ? 'text-[#F2F2F2]'
-                      : 'text-[#A3A3A3] hover:text-[#F2F2F2]',
+                      ? 'text-[#111827]'
+                      : 'text-[#525252] hover:text-[#111827]',
                   )}
                 >
                   {link.label}
@@ -77,7 +75,6 @@ export function Navbar() {
               ))}
             </nav>
 
-            {/* CTA */}
             <div className="hidden lg:block">
               <ShimmerButton
                 onClick={() => handleNavClick('#contact')}
@@ -87,9 +84,8 @@ export function Navbar() {
               </ShimmerButton>
             </div>
 
-            {/* Hamburger */}
             <button
-              className="lg:hidden text-[#A3A3A3] hover:text-[#F2F2F2] transition-colors p-1"
+              className="lg:hidden text-[#525252] hover:text-[#111827] transition-colors p-1"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}
@@ -100,7 +96,6 @@ export function Navbar() {
         </div>
       </header>
 
-      {/* Mobile drawer */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -108,11 +103,11 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-40 bg-[#0D0D0D] flex flex-col items-center justify-center gap-8 lg:hidden"
+            className="fixed inset-0 z-40 bg-white flex flex-col items-center justify-center gap-8 lg:hidden"
             aria-label="Mobile navigation"
           >
             <button
-              className="absolute top-5 right-4 text-[#A3A3A3] hover:text-[#F2F2F2] transition-colors"
+              className="absolute top-5 right-4 text-[#525252] hover:text-[#111827] transition-colors"
               onClick={() => setMobileOpen(false)}
               aria-label="Close menu"
             >
@@ -125,7 +120,7 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.07 }}
                 onClick={() => handleNavClick(link.href)}
-                className="text-3xl font-semibold text-[#A3A3A3] hover:text-[#F2F2F2] transition-colors"
+                className="text-3xl font-semibold text-[#525252] hover:text-[#111827] transition-colors"
               >
                 {link.label}
               </motion.button>

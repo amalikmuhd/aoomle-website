@@ -183,6 +183,13 @@ export const process = {
   ],
 }
 
+export const contact = {
+  phone: '09058572625',
+  phoneHref: 'tel:+2349058572625',
+  address: 'Plot 12A, Wills Court Estate, Abuja, FCT, Nigeria',
+  email: 'malik@aoomle.xyz',
+}
+
 export const cta = {
   heading: 'Ready to Transform Your Business?',
   subtext:
@@ -193,8 +200,10 @@ export const cta = {
 export const footer = {
   brand: 'Aoomle Technology',
   tagline: 'Innovation Engineered for Your Business',
-  address: 'Citec Estate, Mbora, Abuja',
-  email: 'malik@aoomle.xyz',
+  phone: contact.phone,
+  phoneHref: contact.phoneHref,
+  address: contact.address,
+  email: contact.email,
   columns: [
     {
       heading: 'Company',

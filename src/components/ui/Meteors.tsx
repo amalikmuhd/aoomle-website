@@ -23,7 +23,7 @@ export function Meteors({ number = 20, className }: MeteorsProps) {
             left: `${Math.floor(Math.random() * 100)}%`,
             animationDelay: `${Math.random() * 8}s`,
             animationDuration: `${Math.floor(Math.random() * 8 + 4)}s`,
-            opacity: 0.3,
+            opacity: 0.15,
           }}
         />
       ))}
