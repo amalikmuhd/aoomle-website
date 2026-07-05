@@ -2,11 +2,18 @@
   "name": "Aoomle",
   "nameWeight": "Technology",
   "nameFull": "Aoomle Technology",
+  "legalCompanyName": "AOOMLE TECHNOLOGIES LIMITED",
   "website": "aoomle.xyz",
   "tagline": "Innovation Engineered for Your Business",
   "email": "malik@aoomle.xyz",
   "phone": "09058572625",
   "phoneHref": "tel:+2349058572625",
-  "address": "Plot 12A, Wills Court Estate, Abuja, FCT, Nigeria",
+  "address": "Plot 12A, Wills Court Estate, Abuja, FCT 900108, Nigeria",
+  "addressLines": [
+    "Plot 12A, Wills Court Estate,",
+    "Abuja, FCT 900108,",
+    "Nigeria"
+  ],
+  "copyrightYear": 2026,
   "legalLastUpdated": "May 21, 2025"
 }
