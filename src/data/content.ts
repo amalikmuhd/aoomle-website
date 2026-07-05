@@ -218,7 +218,12 @@ export const footer = {
   columns: [
     {
       heading: 'Company',
-      links: ['About Us', 'Careers', 'Blog', 'Contact'],
+      links: [
+        { label: 'About Us', href: '/#about' },
+        'Careers',
+        'Blog',
+        { label: 'Contact', href: '/contact.html' },
+      ],
     },
     {
       heading: 'Solutions',
@@ -232,8 +237,9 @@ export const footer = {
     {
       heading: 'Legal',
       links: [
+        { label: 'Contact', href: '/contact.html' },
         { label: 'Privacy Policy', href: '/privacy-policy.html' },
-        { label: 'Terms and Conditions', href: '/terms-and-conditions.html' },
+        { label: 'Terms & Conditions', href: '/terms-and-conditions.html' },
         { label: 'Return Policy', href: '/return-policy.html' },
       ],
     },
