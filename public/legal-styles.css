@@ -82,3 +82,21 @@ li {
 .contact-block {
   margin-top: 0.5rem;
 }
+
+.site-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0 0 0.5rem;
+  color: #737373;
+  font-size: 0.875rem;
+}
+
+.site-footer p:last-child {
+  margin-bottom: 0;
+}
