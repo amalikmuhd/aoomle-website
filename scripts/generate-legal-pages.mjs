@@ -11,20 +11,31 @@ function fill(template) {
     .replaceAll('{{COMPANY_FULL}}', brand.nameFull)
     .replaceAll('{{COMPANY_SHORT}}', brand.name)
     .replaceAll('{{COMPANY_SUFFIX}}', brand.nameWeight)
+    .replaceAll('{{LEGAL_COMPANY}}', brand.legalCompanyName)
     .replaceAll('{{WEBSITE}}', brand.website)
     .replaceAll('{{EMAIL}}', brand.email)
     .replaceAll('{{PHONE}}', brand.phone)
     .replaceAll('{{PHONE_HREF}}', brand.phoneHref)
     .replaceAll('{{ADDRESS}}', brand.address)
+    .replaceAll('{{ADDRESS_LINES}}', brand.addressLines.join('<br />\n        '))
+    .replaceAll('{{COPYRIGHT_YEAR}}', String(brand.copyrightYear))
     .replaceAll('{{LAST_UPDATED}}', brand.legalLastUpdated)
 }
 
 const contactBlock = `
       <p class="contact-block">
+        <strong>{{LEGAL_COMPANY}}</strong><br />
+        {{ADDRESS_LINES}}<br />
+        <br />
         Email: <a href="mailto:{{EMAIL}}">{{EMAIL}}</a><br />
-        Phone: <a href="{{PHONE_HREF}}">{{PHONE}}</a><br />
-        Address: {{ADDRESS}}
+        Phone: <a href="{{PHONE_HREF}}">{{PHONE}}</a>
       </p>`.trim()
+
+const siteFooter = `
+    <footer class="site-footer">
+      <p>© {{COPYRIGHT_YEAR}} {{COMPANY_SHORT}}. All rights reserved.</p>
+      <p>{{COMPANY_SHORT}} is owned and operated by {{LEGAL_COMPANY}}.</p>
+    </footer>`.trim()
 
 const header = `
     <header class="site-header">
@@ -49,6 +60,7 @@ ${header}
     <main>
 ${body}
     </main>
+${siteFooter}
   </body>
 </html>
 `
@@ -61,6 +73,11 @@ const privacyBody = `
       <h2>Introduction</h2>
       <p>
         At {{COMPANY_FULL}}, we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you. Please read this privacy policy carefully before using our services.
+      </p>
+
+      <h2>Data Controller</h2>
+      <p>
+        The data controller responsible for your personal data is {{LEGAL_COMPANY}}. {{COMPANY_SHORT}} is a technology platform developed and operated by {{LEGAL_COMPANY}}, a company registered in Nigeria.
       </p>
 
       <h2>Information We Collect</h2>
@@ -146,6 +163,11 @@ const termsBody = `
       <h2>Introduction</h2>
       <p>
         Welcome to {{COMPANY_FULL}}'s website. These Terms and Conditions govern your use of our website located at {{WEBSITE}} ("the Website") and all related services, features, content, and applications offered by {{COMPANY_FULL}} (collectively, "the Services"). By accessing or using our Services, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our Services.
+      </p>
+
+      <h2>Service Provider</h2>
+      <p>
+        The Services are provided by {{LEGAL_COMPANY}}. {{COMPANY_SHORT}} is owned and operated by {{LEGAL_COMPANY}}, a company registered in Nigeria.
       </p>
 
       <h2>Acceptance of Terms</h2>
