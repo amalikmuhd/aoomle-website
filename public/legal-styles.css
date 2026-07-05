@@ -100,3 +100,42 @@ li {
 .site-footer p:last-child {
   margin-bottom: 0;
 }
+
+html.js #static-site-content {
+  display: none;
+}
+
+.static-nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.static-nav a {
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.static-nav a:hover {
+  text-decoration: underline;
+}
+
+.site-footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.site-footer-nav a {
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: #525252;
+}
+
+.site-footer-nav a:hover {
+  color: #111827;
+  text-decoration: underline;
+}

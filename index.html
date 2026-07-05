@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/legal-styles.css" />
     <meta name="facebook-domain-verification" content="jhf3f9fgyhdpw6fpy67an1zjp6gqpr" />
     <script type="application/ld+json">
       {
@@ -29,10 +30,41 @@
     </script>
     <style>
       html { scroll-behavior: smooth; }
-      body { background-color: #FFFFFF; }
-      </style>
+      body { background-color: #FFFFFF; margin: 0; }
+      #root { min-height: 100vh; }
+    </style>
+    <script>document.documentElement.classList.add('js')</script>
   </head>
   <body>
+    <div id="static-site-content">
+      <header class="site-header">
+        <a href="/"><strong>Aoomle</strong> <span>Technology</span></a>
+      </header>
+      <main>
+        <h1>Aoomle</h1>
+        <p>Innovation Engineered for Your Business</p>
+        <section aria-labelledby="legal-entity-heading">
+          <h2 id="legal-entity-heading">About AOOMLE TECHNOLOGIES LIMITED</h2>
+          <p>
+            Aoomle is a technology platform developed and operated by AOOMLE TECHNOLOGIES LIMITED, a company registered in Nigeria.
+          </p>
+        </section>
+        <nav class="static-nav" aria-label="Legal and contact links">
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms-and-conditions.html">Terms &amp; Conditions</a>
+        </nav>
+      </main>
+      <footer class="site-footer">
+        <nav class="site-footer-nav" aria-label="Footer links">
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms-and-conditions.html">Terms &amp; Conditions</a>
+        </nav>
+        <p>&copy; 2026 Aoomle. All rights reserved.</p>
+        <p>Aoomle is owned and operated by AOOMLE TECHNOLOGIES LIMITED.</p>
+      </footer>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <!-- <script src="https://app.duworks.xyz/widget.js" data-token="pub_4105e871566a5a5ca05ab8446904769d199c" async></script> -->
