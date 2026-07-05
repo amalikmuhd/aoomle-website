@@ -71,6 +71,10 @@ export const about = {
     `At ${brand.nameFull}, we believe great software is built on deep understanding — of your business, your users, and the problems truly worth solving. Our team combines technical depth with strategic thinking to deliver solutions that create real, lasting value.`,
     'We partner with businesses at every stage — from early-stage startups to established enterprises — bringing the same commitment to quality and craftsmanship to every engagement.',
   ],
+  legalCompany: {
+    heading: brand.legalCompanyName,
+    text: `${brand.name} is a technology platform developed and operated by ${brand.legalCompanyName}, a company registered in Nigeria.`,
+  },
   stats: [
     { value: 200, suffix: '+', label: 'Projects Delivered' },
     { value: 97, suffix: '%', label: 'Client Satisfaction Rate' },
@@ -205,9 +209,11 @@ export const cta = {
 export const footer = {
   brand: brand.nameFull,
   tagline: brand.tagline,
+  legalCompanyName: brand.legalCompanyName,
   phone: contact.phone,
   phoneHref: contact.phoneHref,
   address: contact.address,
+  addressLines: brand.addressLines,
   email: contact.email,
   columns: [
     {
@@ -232,7 +238,8 @@ export const footer = {
       ],
     },
   ],
-  copyright: `© 2025 ${brand.nameFull}. All rights reserved.`,
+  copyright: `© ${brand.copyrightYear} ${brand.name}. All rights reserved.`,
+  ownership: `${brand.name} is owned and operated by ${brand.legalCompanyName}.`,
   social: {
     instagram: 'https://www.instagram.com/aoomle_tech',
   },

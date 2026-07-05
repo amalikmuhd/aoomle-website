@@ -38,6 +38,14 @@ export function About() {
                 {p}
               </p>
             ))}
+            <div className="mt-8 pt-8 border-t border-black/[0.06]">
+              <h3 className="font-bold text-[#111827] mb-3 text-lg">
+                About {about.legalCompany.heading}
+              </h3>
+              <p className="text-[#525252] leading-[1.7]">
+                {about.legalCompany.text}
+              </p>
+            </div>
           </motion.div>
 
           <motion.div

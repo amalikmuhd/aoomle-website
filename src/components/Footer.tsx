@@ -68,8 +68,15 @@ export function Footer() {
             <h3 className="text-xs font-semibold uppercase tracking-[0.08em] text-[#737373] mb-5">
               Contact Us
             </h3>
+            <p className="text-sm font-semibold text-[#525252] mb-2">
+              {footer.legalCompanyName}
+            </p>
             <p className="text-sm text-[#525252] leading-relaxed mb-3">
-              {footer.address}
+              {footer.addressLines.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
             </p>
             <a
               href={footer.phoneHref}
@@ -88,7 +95,10 @@ export function Footer() {
 
         <div className="border-t border-black/[0.06] pt-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-[#737373] text-sm">{footer.copyright}</p>
+            <div className="text-center sm:text-left">
+              <p className="text-[#737373] text-sm">{footer.copyright}</p>
+              <p className="text-[#737373] text-sm mt-1">{footer.ownership}</p>
+            </div>
 
             <div className="flex items-center gap-4" aria-label="Social media links">
               <a
