@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'fs'
+import { readFileSync, writeFileSync, mkdirSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -14,10 +14,16 @@ function fill(template) {
     .replaceAll('{{LEGAL_COMPANY}}', brand.legalCompanyName)
     .replaceAll('{{WEBSITE}}', brand.website)
     .replaceAll('{{EMAIL}}', brand.email)
+    .replaceAll('{{SUPPORT_EMAIL}}', brand.supportEmail)
+    .replaceAll('{{WEBSITE_URL}}', brand.websiteUrl)
     .replaceAll('{{PHONE}}', brand.phone)
     .replaceAll('{{PHONE_HREF}}', brand.phoneHref)
     .replaceAll('{{ADDRESS}}', brand.address)
     .replaceAll('{{ADDRESS_LINES}}', brand.addressLines.join('<br />\n        '))
+    .replaceAll(
+      '{{CONTACT_ADDRESS_LINES}}',
+      brand.addressLines.map((line) => line.replace(/,$/, '')).join('<br />\n        '),
+    )
     .replaceAll('{{COPYRIGHT_YEAR}}', String(brand.copyrightYear))
     .replaceAll('{{LAST_UPDATED}}', brand.legalLastUpdated)
 }
@@ -33,6 +39,11 @@ const contactBlock = `
 
 const siteFooter = `
     <footer class="site-footer">
+      <nav class="site-footer-nav" aria-label="Footer links">
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms-and-conditions.html">Terms &amp; Conditions</a>
+      </nav>
       <p>© {{COPYRIGHT_YEAR}} {{COMPANY_SHORT}}. All rights reserved.</p>
       <p>{{COMPANY_SHORT}} is owned and operated by {{LEGAL_COMPANY}}.</p>
     </footer>`.trim()
@@ -334,10 +345,29 @@ const returnBody = `
 ${contactBlock}
 `
 
+const contactBody = `
+      <h1>Contact</h1>
+
+      <p class="contact-block">
+        <strong>{{LEGAL_COMPANY}}</strong><br />
+        <br />
+        Registered Office<br />
+        <br />
+        {{CONTACT_ADDRESS_LINES}}<br />
+        <br />
+        Email:<br />
+        <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a><br />
+        <br />
+        Website:<br />
+        <a href="{{WEBSITE_URL}}">{{WEBSITE_URL}}</a>
+      </p>
+`
+
 const pages = [
   { file: 'privacy-policy.html', title: 'Privacy Policy', body: privacyBody },
   { file: 'terms-and-conditions.html', title: 'Terms and Conditions', body: termsBody },
   { file: 'return-policy.html', title: 'Return Policy', body: returnBody },
+  { file: 'contact.html', title: 'Contact', body: contactBody },
 ]
 
 for (const { file, title, body } of pages) {
@@ -345,3 +375,9 @@ for (const { file, title, body } of pages) {
   writeFileSync(join(root, 'public', file), html, 'utf8')
   console.log(`Generated public/${file}`)
 }
+
+const contactDir = join(root, 'public', 'contact')
+mkdirSync(contactDir, { recursive: true })
+const contactHtml = fill(pageShell({ title: 'Contact', body: contactBody }))
+writeFileSync(join(contactDir, 'index.html'), contactHtml, 'utf8')
+console.log('Generated public/contact/index.html')
